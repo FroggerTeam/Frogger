@@ -9,9 +9,13 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class GameGUI extends JFrame {
-
+	
+	JLabel HolzStammUI = new JLabel("");
+    public boolean FrogDead;
 	private JPanel contentPane;
 
 	/**
@@ -29,6 +33,8 @@ public class GameGUI extends JFrame {
 			}
 		});
 	}
+
+
 
 	/**
 	 * Create the frame.
@@ -59,9 +65,29 @@ public class GameGUI extends JFrame {
 		AutoUI.setBounds(129, 330, 208, 110);
 		contentPane.add(AutoUI);
 		
-		JLabel HolzStammUI = new JLabel("");
+		
 		HolzStammUI.setIcon(new ImageIcon("D:\\JavaFrogger\\GitHub\\Frogger\\Baumstamm READY.png"));
-		HolzStammUI.setBounds(141, 186, 208, 58);
+		HolzStammUI.setBounds(166, 190, 191, 54);
 		contentPane.add(HolzStammUI);
+		
+		JButton btnNewButton = new JButton("New button");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				bewegeBaumstamm(2000, 0);
+			}
+		});
+		btnNewButton.setBounds(161, 486, 89, 23);
+		contentPane.add(btnNewButton);
+	}
+	public void Spiellauf() {
+		while(FrogDead == false)
+		{
+			bewegeBaumstamm(0,0);
+		}
+		
+	}
+	public void bewegeBaumstamm(int XDir, int YDir)
+	{
+		HolzStammUI.setLocation(getLocation().x + XDir, getLocation().y + YDir);
 	}
 }
