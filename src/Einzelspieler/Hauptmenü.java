@@ -45,6 +45,11 @@ public class Hauptmenü extends JFrame {
 		contentPane.setLayout(null);
 		
 		JButton btnStarten = new JButton("Spiel starten");
+		btnStarten.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				hallo;
+			}
+		});
 		btnStarten.setBounds(184, 115, 152, 23);
 		contentPane.add(btnStarten);
 		
