@@ -73,7 +73,7 @@ public class GameGUI extends JFrame {
 		JButton btnNewButton = new JButton("New button");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				bewegeBaumstamm(2000, 0);
+				bewegeBaumstamm(2000);
 			}
 		});
 		btnNewButton.setBounds(161, 486, 89, 23);
@@ -82,12 +82,12 @@ public class GameGUI extends JFrame {
 	public void Spiellauf() {
 		while(FrogDead == false)
 		{
-			bewegeBaumstamm(0,0);
+			bewegeBaumstamm(0);
 		}
 		
 	}
-	public void bewegeBaumstamm(int XDir, int YDir)
+	public void bewegeBaumstamm(int XDir)
 	{
-		HolzStammUI.setLocation(getLocation().x + XDir, getLocation().y + YDir);
+		HolzStammUI.setLocation(getLocation().x + XDir, getLocation().y);
 	}
 }
