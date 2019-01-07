@@ -1,4 +1,4 @@
-package Einzelspieler;
+package Hauptmenüpackage;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -47,7 +47,7 @@ public class Hauptmenü extends JFrame {
 		JButton btnStarten = new JButton("Spiel starten");
 		btnStarten.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				hallo;
+			
 			}
 		});
 		btnStarten.setBounds(184, 115, 152, 23);
