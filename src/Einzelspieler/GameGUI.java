@@ -2,6 +2,7 @@ package Einzelspieler;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
+import java.awt.Point;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -88,6 +89,8 @@ public class GameGUI extends JFrame {
 	}
 	public void bewegeBaumstamm(int XDir)
 	{
-		HolzStammUI.setLocation(getLocation().x + XDir, getLocation().y);
+		//HolzStammUI.setLocation(getLocation().x + XDir, getLocation().y);
+		
+		
 	}
 }
