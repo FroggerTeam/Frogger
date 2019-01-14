@@ -12,6 +12,7 @@ import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Label;
 
 public class GameGUI extends JFrame {
 	
@@ -75,10 +76,15 @@ public class GameGUI extends JFrame {
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				bewegeBaumstamm(2000);
+			    
 			}
 		});
 		btnNewButton.setBounds(161, 486, 89, 23);
 		contentPane.add(btnNewButton);
+		
+		Label KoordinatenStamm = new Label("New label");
+		KoordinatenStamm.setBounds(445, 464, 62, 22);
+		contentPane.add(KoordinatenStamm);
 	}
 	public void Spiellauf() {
 		while(FrogDead == false)
