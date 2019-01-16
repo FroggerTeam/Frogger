@@ -47,7 +47,7 @@ public class Hauptmenü extends JFrame {
 		JButton btnStarten = new JButton("Spiel starten");
 		btnStarten.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-			
+				gamegui.Spiellauf();
 			}
 		});
 		btnStarten.setBounds(184, 115, 152, 23);
